@@ -108,9 +108,9 @@ public class ERQueryService {
                .setBaseUrl(eventRepositoryUrl)
                .setEndpoint(eventId)
                .addParameter("limit", Integer.toString(limit))
-               .addParameter("levels", Integer.toString(levels))
                .addParameter("tree", Boolean.toString(tree))
                .addParameter("shallow", Boolean.toString(shallowParameter))
+               .addParameter("levels", Integer.toString(levels))
                .setBody(searchParameters.getAsJsonString(), ContentType.APPLICATION_JSON);
 
         String uri = request.getURI().toString();
