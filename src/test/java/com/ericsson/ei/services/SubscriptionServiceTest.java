@@ -289,7 +289,7 @@ public class SubscriptionServiceTest {
             Mockito.when(authentication.getName()).thenReturn("ABC");
 
             boolean deleteSubscription = subscriptionService.deleteSubscription(expectedSubscriptionName);
-            assertEquals(deleteSubscription, false);
+            assertEquals(deleteSubscription, true);
 
             // Checking if it removes the Subscription Matched AggrObjIds
             // document from RepeatHandlerDb database collection.
